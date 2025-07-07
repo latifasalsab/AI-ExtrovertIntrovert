@@ -81,7 +81,7 @@ const PersonalityTest = () => {
     });
 
     try {
-      const res = await axios.post('/api/predict', { input: finalInputs });
+      const res = await axios.post('https://latifasalsab.pythonanywhere.com/api/predict', { input: finalInputs });
       setResult(res.data);
     } catch (err) {
       console.error('Prediction error:', err);
